@@ -16,7 +16,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix"
+    "lint:fix": "eslint ./src --fix",
+    "test": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "gatsby": "^3.11.1",
@@ -28,8 +30,15 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/react-hooks": "^7.0.1",
+    "babel-jest": "^27.0.6",
+    "babel-preset-gatsby": "^1.11.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0"
+    "eslint-plugin-prettier": "^3.4.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.0.6",
+    "react-test-renderer": "^17.0.2"
   }
 }
