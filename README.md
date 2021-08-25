@@ -91,3 +91,4 @@ Depending on the nature your hotfix and the history of `dev` you may need to to 
 - [ ] Add decanter and decanter-react
 - [ ] storyblok component update / content migration
 - [ ] Typescript/Typecheck?
+- [ ] Netlify lambdas?

@@ -1,0 +1,30 @@
+[build]
+  publish = "public"
+  functions = "lambda"
+
+[[plugins]]
+  package = 'netlify-plugin-contextual-env'
+  [plugins.inputs]
+    mode = 'prefix'
+
+[dev]
+  publish = "public"
+  port = 64946
+  autolaunch = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Content-Security-Policy = "form-action https:"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=2592000"
+    Permissions-Policy = "vibrate=(), geolocation=(), midi=(), notifications=(), push=(), microphone=(), camera=(), magnetometer=(), gyroscope=(), speaker=()"
+    X-Robots-Tag = "noindex, nofollow"
+
+# API redirect for lambda functions.
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
