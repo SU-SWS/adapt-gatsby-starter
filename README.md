@@ -16,6 +16,8 @@ and store it as a repository secret named `GH_ACCESS_TOKEN`. This token is used 
 ### Netlify
 TODO
 
+Contextual environemtn configuration
+
 ### Codeclimate
 
 To add codeclimate checks log in to codeclimate and add your repository with `dev` as the default branch.
