@@ -32,5 +32,5 @@ jobs:
           version: ${{ steps.version_bump.outputs.newTag }}
           publish: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_ACTION_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
