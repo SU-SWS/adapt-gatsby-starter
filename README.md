@@ -24,8 +24,8 @@ TODO
 
 - [ ] PR labeler
 - [ ] Status Checks
-  - [ ] lint
-  - [ ] unit test
+  - [x] lint
+  - [x] unit test
   - [ ] build
   - [ ] codeclimate
 - [ ] deploy dev
