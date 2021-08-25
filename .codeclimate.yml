@@ -64,3 +64,4 @@ exclude_patterns:
   - 'public'
   - 'static'
   - coverage
+  - '**.md'
