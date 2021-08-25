@@ -17,7 +17,10 @@ and store it as a repository secret named `GH_ACCESS_TOKEN`. This token is used 
 TODO
 
 ### Codeclimate
-TODO
+
+To add codeclimate checks log in to codeclimate and add your repository with `dev` as the default branch.
+Go the codeclimate repo settings and install the Github pull request status updates. Now go back to Github
+and make sure `codeclimate` is added to required Status Checks for the `dev` branch protection settings.
 
 ## Development Workflows
 
@@ -78,7 +81,7 @@ Depending on the nature your hotfix and the history of `dev` you may need to to 
   - [x] lint
   - [x] unit test
   - [ ] build N/A (handle in netlify?)
-  - [ ] codeclimate
+  - [x] codeclimate
 - [ ] deploy dev (Netlify branch deploy)
 - [ ] deploy prod (Netlify prod deploy)
 - [ ] deploy feature branch (handle in netlify?)
