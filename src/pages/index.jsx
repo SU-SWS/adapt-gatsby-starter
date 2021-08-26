@@ -19,7 +19,7 @@ const paragraphStyles = {
 const IndexPage = () => (
   <main style={pageStyles}>
     <h1 style={headingStyles}>Adapt Gatsby Starter</h1>
-    <p style={paragraphStyles}>TODO: Document</p>
+    <p style={paragraphStyles}>Document</p>
   </main>
 );
 
