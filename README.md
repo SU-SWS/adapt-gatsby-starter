@@ -23,6 +23,8 @@ want contextual env values for a variable named `GATSBY_STORYBLOK_TOKEN` in your
 - `DEV_GATSBY_STORYBLOK_TOKEN` = `THIS VALUE WOULD BE USED FOR OUR DEV BRANCH DEPLOY`
 - `DEPLOY_PREVIEW_GATSBY_STORYBLOK_TOKEN` = `THIS VALUE WOULD BE USED FOR OUR DEPLOY PREVIEWS FOR DEV AND PROD`
 
+Make sure to add netlify deploy-preview to your github `dev` branch require status checks to ensure proper PR gating.
+
 ### Codeclimate
 
 To add codeclimate checks log in to codeclimate and add your repository with `dev` as the default branch.
