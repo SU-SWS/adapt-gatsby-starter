@@ -46,9 +46,9 @@ Pull requests against dev will need to pass status checks for the following:
 - test
 - codeclimate
 - Branch up to date with `dev`
-- Netlify build/deploy preview (TODO)
+- Netlify build/deploy preview
 
-Pull requests merged into dev will kickoff a Netlify branch deploy for the `dev` branch. (TODO)
+Pull requests merged into dev will kickoff a Netlify branch deploy for the `dev` branch.
 
 ## Release Workflow
 
