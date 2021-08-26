@@ -14,7 +14,16 @@ For our workflow automation we need to provide github a [personal access token w
 and store it as a repository secret named `GH_ACCESS_TOKEN`. This token is used for automatic semver versioning and merging changes back into `dev`.
 
 ### Netlify
-TODO
+
+Once your site is integrated with Netlify you can add contextual build variables for your site in the Netlify deploy settings.
+We're currently using [netlify-plugin-contextual-env](https://github.com/cball/netlify-plugin-contextual-env) which means if you
+want contextual env values for a variable named `GATSBY_STORYBLOK_TOKEN` in your builds you would define the following in Netlify:
+- `GATSBY_STORYBLOK_TOKEN` = `THIS IS THE BASE VALUE THAT WILL BE USED IF NOT OVERRIDDEN WITH CONTEXT`
+- `PRODUCTION_GATSBY_STORYBLOK_TOKEN` = `THIS VALUE WOULD BE USED IN PRODUCTION`
+- `DEV_GATSBY_STORYBLOK_TOKEN` = `THIS VALUE WOULD BE USED FOR OUR DEV BRANCH DEPLOY`
+- `DEPLOY_PREVIEW_GATSBY_STORYBLOK_TOKEN` = `THIS VALUE WOULD BE USED FOR OUR DEPLOY PREVIEWS FOR DEV AND PROD`
+
+Make sure to add netlify deploy-preview to your github `dev` branch require status checks to ensure proper PR gating.
 
 ### Codeclimate
 
@@ -39,9 +48,9 @@ Pull requests against dev will need to pass status checks for the following:
 - test
 - codeclimate
 - Branch up to date with `dev`
-- Netlify build/deploy preview (TODO)
+- Netlify build/deploy preview
 
-Pull requests merged into dev will kickoff a Netlify branch deploy for the `dev` branch. (TODO)
+Pull requests merged into dev will kickoff a Netlify branch deploy for the `dev` branch.
 
 ## Release Workflow
 
@@ -80,14 +89,15 @@ Depending on the nature your hotfix and the history of `dev` you may need to to 
 - [x] Status Checks
   - [x] lint
   - [x] unit test
-  - [ ] build N/A (handle in netlify?)
+  - [x] build N/A (handle in netlify?)
   - [x] codeclimate
-- [ ] deploy dev (Netlify branch deploy)
-- [ ] deploy prod (Netlify prod deploy)
-- [ ] deploy feature branch (handle in netlify?)
+- [x] deploy dev (Netlify branch deploy)
+- [x] deploy prod (Netlify prod deploy)
+- [x] deploy feature (preview) branch (handle in netlify?)
 - [x] semver
 - [x] release notes
 - [ ] slack notify
 - [ ] Add decanter and decanter-react
 - [ ] storyblok component update / content migration
 - [ ] Typescript/Typecheck?
+- [ ] Netlify lambdas?
